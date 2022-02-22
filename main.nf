@@ -2,10 +2,9 @@
 
 nextflow.enable.dsl = 2
 
-include { NFCORE_FETCHNGS } from "$projectDir/subworkflows/fetchngs/main"
-    addParams(
+include { NFCORE_FETCHNGS } from "$projectDir/subworkflows/fetchngs/main" addParams(
         outdir: params.fetchngs_outdir, 
-        nf_core_pipeline: rnaseq
+        nf_core_pipeline: 'rnaseq'
     )
 include { NFCORE_RNASEQ   } from "$projectDir/subworkflows/rnaseq/main"
 
