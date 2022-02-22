@@ -6,7 +6,7 @@ include { NFCORE_FETCHNGS } from "$projectDir/subworkflows/fetchngs/main" addPar
         outdir: params.fetchngs_outdir, 
         nf_core_pipeline: 'rnaseq'
     )
-include { NFCORE_RNASEQ   } from "$projectDir/subworkflows/rnaseq/main"
+// include { NFCORE_RNASEQ   } from "$projectDir/subworkflows/rnaseq/main"
 
 workflow {
     NFCORE_FETCHNGS()
