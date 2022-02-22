@@ -1,0 +1,1 @@
+../subworkflows/fetchngs/lib/NfcoreSchema.groovy

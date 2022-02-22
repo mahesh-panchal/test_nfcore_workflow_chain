@@ -1,0 +1,1 @@
+../subworkflows/fetchngs/bin/sra_ids_to_runinfo.py
