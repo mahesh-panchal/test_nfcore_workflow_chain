@@ -1,0 +1,19 @@
+# Nextflow run files
+.nextflow*
+
+# Nextflow default work directory files
+work/
+
+# data folder
+data/
+
+# nf-core default results folder
+results/
+
+# MAC configuration files
+.DS_Store
+
+# Test files
+testing/
+testing*
+*.pyc
