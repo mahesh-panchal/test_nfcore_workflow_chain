@@ -1,6 +1,5 @@
 # Fetchngs parameters
 input: 'data/ids.txt'
-fetchngs_outdir: 'fetchngs_data'
 
 # Rnaseq parameters
-outdir: 'rnaseq_data'
+outdir: 'results'
