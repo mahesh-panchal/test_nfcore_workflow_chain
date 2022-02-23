@@ -47,7 +47,12 @@ include { RNASEQ } from './workflows/rnaseq'
 // WORKFLOW: Run main nf-core/rnaseq analysis pipeline
 //
 workflow NFCORE_RNASEQ {
-    RNASEQ ()
+
+    take:
+    samplesheet
+
+    main:
+    RNASEQ ( samplesheet )
 }
 
 /*
@@ -61,7 +66,7 @@ workflow NFCORE_RNASEQ {
 // See: https://github.com/nf-core/rnaseq/issues/619
 //
 workflow {
-    NFCORE_RNASEQ ()
+    NFCORE_RNASEQ ( Channel.empty() )
 }
 
 /*

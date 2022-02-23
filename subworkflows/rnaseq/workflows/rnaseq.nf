@@ -154,6 +154,10 @@ def fail_percent_mapped = [:]
 
 workflow RNASEQ {
 
+    take:
+    samplesheet
+
+    main:
     ch_versions = Channel.empty()
 
     //
@@ -170,7 +174,7 @@ workflow RNASEQ {
     // SUBWORKFLOW: Read in samplesheet, validate and stage input files
     //
     INPUT_CHECK (
-        ch_input
+        samplesheet.ifEmpty( ch_input ) // ch_input is a file, not a channel.
     )
     .reads
     .map {
