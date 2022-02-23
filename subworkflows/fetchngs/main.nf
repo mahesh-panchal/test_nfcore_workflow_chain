@@ -74,6 +74,9 @@ workflow NFCORE_FETCHNGS {
     } else if (params.input_type == 'synapse') {
         SYNAPSE ( ch_ids )
     }
+
+    emit:
+    samplesheet = params.input_type == 'sra' ? SRA.out.samplesheet : params.input_type == 'synapse' ? SYNAPSE.out.samplesheet : Channel.empty()
 }
 
 /*

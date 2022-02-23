@@ -129,6 +129,7 @@ workflow SRA {
             )
             ch_versions = ch_versions.mix(MULTIQC_MAPPINGS_CONFIG.out.versions)
         }
+
     }
 
     //
@@ -137,6 +138,9 @@ workflow SRA {
     CUSTOM_DUMPSOFTWAREVERSIONS (
         ch_versions.unique().collectFile(name: 'collated_versions.yml')
     )
+
+    emit:
+    samplesheet = SRA_MERGE_SAMPLESHEET.out.samplesheet
 }
 
 /*
