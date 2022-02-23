@@ -22,7 +22,8 @@ git subtree add --prefix subworkflows/rnaseq https://github.com/nf-core/rnaseq m
 - Copy `getGenomeAttribute` function into `lib/WorkflowMain.groovy`
 - Copy `WorkflowRnaseq.groovy` to lib.
 - update params.yml
-- `cp -r cp -r subworkflows/rnaseq/assets assets` in $projectDir.
+- `cp -r subworkflows/rnaseq/assets assets` in $projectDir.
+- `cp -n subworkflows/rnaseq/bin/* bin/` in $projectDir.
 
 ## Updating
 
