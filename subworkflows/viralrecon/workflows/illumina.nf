@@ -19,7 +19,7 @@ WorkflowIllumina.initialise(params, log, valid_params)
 
 // Check input path parameters to see if they exist
 def checkPathParamList = [
-    params.input, params.fasta, params.gff, params.bowtie2_index,
+    params.fasta, params.gff, params.bowtie2_index,
     params.kraken2_db, params.primer_bed, params.primer_fasta,
     params.blast_db, params.spades_hmm, params.multiqc_config
 ]
@@ -114,7 +114,11 @@ def pass_mapped_reads = [:]
 def fail_mapped_reads = [:]
 
 workflow ILLUMINA {
+    
+    take:
+    samplesheet
 
+    main:
     ch_versions = Channel.empty()
 
     //
@@ -164,7 +168,7 @@ workflow ILLUMINA {
     // SUBWORKFLOW: Read in samplesheet, validate and stage input files
     //
     INPUT_CHECK (
-        ch_input,
+        samplesheet.ifEmpty( ch_input ),
         params.platform
     )
     .sample_info

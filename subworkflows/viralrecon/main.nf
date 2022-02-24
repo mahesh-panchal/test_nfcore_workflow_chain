@@ -60,17 +60,21 @@ if (params.platform == 'illumina') {
 
 workflow NFCORE_VIRALRECON {
 
+    take:
+    samplesheet
+
+    main:
     //
     // WORKFLOW: Variant and de novo assembly analysis for Illumina data
     //
     if (params.platform == 'illumina') {
-        ILLUMINA ()
+        ILLUMINA ( samplesheet )
 
     //
     // WORKFLOW: Variant analysis for Nanopore data
     //
     } else if (params.platform == 'nanopore') {
-        NANOPORE ()
+        NANOPORE ( samplesheet )
     }
 }
 
@@ -86,7 +90,7 @@ workflow NFCORE_VIRALRECON {
 //
 
 workflow {
-    NFCORE_VIRALRECON ()
+    NFCORE_VIRALRECON ( Channel.empty() )
 }
 
 /*

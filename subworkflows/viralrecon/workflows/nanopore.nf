@@ -15,7 +15,7 @@ def summary_params = NfcoreSchema.paramsSummaryMap(workflow, params)
 WorkflowNanopore.initialise(params, log, valid_params)
 
 def checkPathParamList = [
-    params.input, params.fastq_dir, params.fast5_dir,
+    params.fastq_dir, params.fast5_dir,
     params.sequencing_summary, params.gff
 ]
 for (param in checkPathParamList) { if (param) { file(param, checkIfExists: true) } }
@@ -109,6 +109,10 @@ def fail_barcode_reads = [:]
 
 workflow NANOPORE {
 
+    take:
+    samplesheet
+
+    main:
     ch_versions = Channel.empty()
 
     //
@@ -174,7 +178,7 @@ workflow NANOPORE {
         //
         if (params.input) {
             INPUT_CHECK (
-                ch_input,
+                samplesheet.ifEmpty( ch_input ),
                 params.platform
             )
             .sample_info
