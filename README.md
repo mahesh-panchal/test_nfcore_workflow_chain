@@ -2,6 +2,7 @@
 
 Aim: Chain together nf-core Fetchngs and Rnaseq into a single workflow that allows updates to be pulled from source repos.
 
+Disclaimer: Prototype for learning how to chain together nf-core workflows. Output is not tested for accuracy. Bugs are likely. 
 ## Setup
 
 ```bash
