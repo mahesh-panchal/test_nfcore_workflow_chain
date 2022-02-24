@@ -17,7 +17,7 @@ WorkflowRnaseq.initialise(params, log, valid_params)
 
 // Check input path parameters to see if they exist
 checkPathParamList = [
-    params.input, params.multiqc_config,
+    params.multiqc_config,
     params.fasta, params.transcript_fasta, params.additional_fasta,
     params.gtf, params.gff, params.gene_bed,
     params.ribo_database_manifest, params.splicesites,

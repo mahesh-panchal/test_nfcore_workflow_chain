@@ -24,6 +24,7 @@ git subtree add --prefix subworkflows/rnaseq https://github.com/nf-core/rnaseq m
 - update params.yml
 - `cp -r subworkflows/rnaseq/assets assets` in $projectDir.
 - `cp -n subworkflows/rnaseq/bin/* bin/` in $projectDir.
+- remove params.input from file checklist in rnaseq.nf
 
 ## Updating
 
