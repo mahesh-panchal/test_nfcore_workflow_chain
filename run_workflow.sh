@@ -1,7 +1,8 @@
 #! /usr/bin/env bash
 
-WORKDIR=${WORKDIR:-$HOME/nxf-work}
+PROFILE=${PROFILE:-docker}
+WORKDIR=${WORKDIR:-/workspace/nxf-work}
 nextflow run main.nf \
     -w "$WORKDIR" \
-    -profile docker \
+    -profile "$PROFILE" \
     -params-file params.yml

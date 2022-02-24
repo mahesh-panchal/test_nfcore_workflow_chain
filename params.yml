@@ -18,3 +18,7 @@ rsem_index : 'https://github.com/nf-core/test-datasets/raw/rnaseq/reference/rsem
 skip_bbsplit : false
 pseudo_aligner : 'salmon'
 umitools_bc_pattern : 'NNNN'
+
+# General parameters
+max_memory : '60.GB'
+max_cpus : 16
