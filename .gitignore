@@ -4,9 +4,6 @@
 # Nextflow default work directory files
 work/
 
-# data folder
-data/
-
 # nf-core default results folder
 results/
 
