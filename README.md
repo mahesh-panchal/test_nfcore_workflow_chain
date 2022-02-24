@@ -61,3 +61,4 @@ git subtree pull --prefix subworkflows/viralrecon https://github.com/nf-core/vir
     ```
 - Cannot comment out WorkflowMain (i.e. Groovy classes in lib). Includes functions for autodetecting ID type.
 - Be careful about overwriting files in lib, bin, assets, etc. Use `cp -irv source target` to prompt, recurse, and be verbose. Use `diff` to check for file differences, and rename as necessary.
+- Probably better to rename duplicate files with different checksums rather than merge and rename functions.
