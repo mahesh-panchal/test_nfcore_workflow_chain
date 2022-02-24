@@ -1,6 +1,6 @@
 # Chaining nf-core workflows
 
-Aim: Chain together nf-core Fetchngs and Rnaseq into a single workflow that allows updates to be pulled from source repos.
+Aim: Chain together nf-core Fetchngs, Rnaseq, and Viralrecon into a single workflow that allows updates to be pulled from source repos.
 
 Disclaimer: Prototype for learning how to chain together nf-core workflows. Output is not tested for accuracy. Bugs are likely. 
 ## Setup
@@ -48,6 +48,7 @@ git subtree add --prefix subworkflows/viralrecon https://github.com/nf-core/vira
 ```bash
 git subtree pull --prefix subworkflows/fetchngs https://github.com/nf-core/fetchngs master --squash
 git subtree pull --prefix subworkflows/rnaseq https://github.com/nf-core/rnaseq master --squash
+git subtree pull --prefix subworkflows/viralrecon https://github.com/nf-core/viralrecon master --squash
 ```
 
 ## Notes:
