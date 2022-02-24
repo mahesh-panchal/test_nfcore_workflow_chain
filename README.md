@@ -23,7 +23,7 @@ git subtree add --prefix subworkflows/rnaseq https://github.com/nf-core/rnaseq m
 - Copy `WorkflowRnaseq.groovy` to lib.
 - update params.yml
 - `cp -r subworkflows/rnaseq/assets assets` in $projectDir.
-- `cp -n subworkflows/rnaseq/bin/* bin/` in $projectDir.
+- `cp -n subworkflows/rnaseq/bin/* bin/` in $projectDir. This folder is specifically mounted in the container. This is why scripts need to be copied, and not symlinked. Alternatively modifying the PATH and adding the correct paths as container mount points should also work.
 - remove params.input from file checklist in rnaseq.nf
 
 ## Updating
