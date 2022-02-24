@@ -25,3 +25,14 @@ input : 'data/ids.txt'
 # umitools_bc_pattern : 'NNNN'
 
 # Viralrecon parameters
+platform : 'illumina'
+protocol : 'amplicon'
+primer_set : 'artic'
+primer_set_version : 3
+
+genome : 'MN908947.3'
+
+variant_caller : 'ivar'
+
+assemblers : 'spades,unicycler,minia'
+skip_plasmidid : true 
