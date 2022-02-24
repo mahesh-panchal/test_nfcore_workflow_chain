@@ -34,4 +34,10 @@ git subtree pull --prefix subworkflows/rnaseq https://github.com/nf-core/rnaseq 
 
 ## Notes:
 
+- Check codebase differences with:
+    ```
+    cd ..
+    git clone https://github.com/nf-core/fetchngs
+    diff -qr --exclude=.git fetchngs myrepo/subworkflows/fetchngs | cut -d" " -f2,4 | xargs -t -n 2 diff
+    ```
 - Cannot comment out WorkflowMain (i.e. Groovy classes in lib). Includes functions for autodetecting ID type.
