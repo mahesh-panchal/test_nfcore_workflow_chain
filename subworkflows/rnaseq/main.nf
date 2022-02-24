@@ -17,15 +17,15 @@ nextflow.enable.dsl = 2
 ========================================================================================
 */
 
-params.fasta         = WorkflowMain.getGenomeAttribute(params, 'fasta')
-params.gtf           = WorkflowMain.getGenomeAttribute(params, 'gtf')
-params.gff           = WorkflowMain.getGenomeAttribute(params, 'gff')
-params.gene_bed      = WorkflowMain.getGenomeAttribute(params, 'bed12')
-params.bbsplit_index = WorkflowMain.getGenomeAttribute(params, 'bbsplit')
-params.star_index    = WorkflowMain.getGenomeAttribute(params, 'star')
-params.hisat2_index  = WorkflowMain.getGenomeAttribute(params, 'hisat2')
-params.rsem_index    = WorkflowMain.getGenomeAttribute(params, 'rsem')
-params.salmon_index  = WorkflowMain.getGenomeAttribute(params, 'salmon')
+params.fasta         = WorkflowMain.getRnaseqGenomeAttribute(params, 'fasta')
+params.gtf           = WorkflowMain.getRnaseqGenomeAttribute(params, 'gtf')
+params.gff           = WorkflowMain.getRnaseqGenomeAttribute(params, 'gff')
+params.gene_bed      = WorkflowMain.getRnaseqGenomeAttribute(params, 'bed12')
+params.bbsplit_index = WorkflowMain.getRnaseqGenomeAttribute(params, 'bbsplit')
+params.star_index    = WorkflowMain.getRnaseqGenomeAttribute(params, 'star')
+params.hisat2_index  = WorkflowMain.getRnaseqGenomeAttribute(params, 'hisat2')
+params.rsem_index    = WorkflowMain.getRnaseqGenomeAttribute(params, 'rsem')
+params.salmon_index  = WorkflowMain.getRnaseqGenomeAttribute(params, 'salmon')
 
 /*
 ========================================================================================

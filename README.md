@@ -34,6 +34,8 @@ git subtree add --prefix subworkflows/viralrecon https://github.com/nf-core/vira
 - `include` workflow in main.nf and use `addParams` to override certain options.
 - Include viralrecon config with `includeConfig`
 - Add conditional to select between viralrecon and rnaseq workflows.
+- Copy `subworkflows/viralrecon/lib/Workflow{Commons,Illumina,Nanopore}.groovy` to lib in $projectDir
+- Copy `getGenomeAttribute` function to `lib/WorkflowMain.groovy` and differentiate methods as `getViralreconGenomeAttribute` and `getRnaseqGenomeAttribute` in respective workflows.
 
 
 ## Updating
