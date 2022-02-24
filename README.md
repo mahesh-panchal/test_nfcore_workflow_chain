@@ -27,6 +27,12 @@ git subtree add --prefix subworkflows/viralrecon https://github.com/nf-core/vira
 - `cp -n subworkflows/rnaseq/bin/* bin/` in $projectDir. This folder is specifically mounted in the container. This is why scripts need to be copied, and not symlinked. Alternatively modifying the PATH and adding the correct paths as container mount points should also work.
 - remove params.input from file checklist in rnaseq.nf
 
+### Adding viralrecon
+- `include` workflow in main.nf and use `addParams` to override certain options.
+- Include viralrecon config with `includeConfig`
+- Add conditional to select between viralrecon and rnaseq workflows.
+
+
 ## Updating
 
 ```bash
