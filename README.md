@@ -20,6 +20,7 @@ git subtree add --prefix subworkflows/viralrecon https://github.com/nf-core/vira
 - `include` workflow in main.nf and use `addParams` to override certain options.
 - Include rnaseq config with `includeConfig`
 - Add emit statements to fetchngs workflow
+- Add take statements to rnaseq workflow
 - Copy `getGenomeAttribute` function into `lib/WorkflowMain.groovy`
 - Copy `WorkflowRnaseq.groovy` to lib.
 - update params.yml
