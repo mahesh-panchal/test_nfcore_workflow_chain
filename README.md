@@ -5,6 +5,7 @@
 ```bash
 git subtree add --prefix subworkflows/fetchngs https://github.com/nf-core/fetchngs master --squash
 git subtree add --prefix subworkflows/rnaseq https://github.com/nf-core/rnaseq master --squash
+git subtree add --prefix subworkflows/viralrecon https://github.com/nf-core/viralrecon master --squash
 ```
 
 ### Adding fetchngs
