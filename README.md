@@ -2,7 +2,17 @@
 
 Aim: Chain together nf-core Fetchngs, Rnaseq, and Viralrecon into a single workflow that allows updates to be pulled from source repos.
 
-Disclaimer: Prototype for learning how to chain together nf-core workflows. Output is not tested for accuracy. Bugs are likely. 
+Disclaimer: Prototype for learning how to chain together nf-core workflows. Output is not tested for accuracy. Bugs are likely.
+It's probably less hassle to run the workflows separately than deal with the merge conflicts and code base management when updating.
+
+## Basic steps
+1. Add workflows with `git subtree`.
+2. Find duplicate filenames with different content in assets, bin, and lib. Rename them to be pipeline specific, and update the code bases
+3. Copy assets, bin, and lib subworkflow folders to their respective folders in the root of the mega-workflow. 
+4. Include workflows and includeConfig nextflow.configs, and copy `check_max` function.
+5. Add emit, take, and main statements where necessary to be able to chain workflows.
+6. Connect it all up.
+
 ## Setup
 
 ```bash
