@@ -5,6 +5,8 @@ Aim: Chain together nf-core Fetchngs, Rnaseq, and Viralrecon into a single workf
 Disclaimer: Prototype for learning how to chain together nf-core workflows. Output is not tested for accuracy. Bugs are likely.
 It's probably less hassle to run the workflows separately than deal with the merge conflicts and code base management when updating.
 
+Status: Leaving as is. Generates results, but stops at final summary step with [this error](https://github.com/mahesh-panchal/test_nfcore_workflow_chain/issues/3). This is because my initial strategy was to try merging files with same names, but this leads to too many method conflicts (and hidden conflicts when methods have the same input but do different things). Files with common names should be made distinct to the workflow. It also allows one to use the commands below to see which files are often in conflict. 
+
 ## Basic steps
 1. Add workflows with `git subtree`.
 2. Find duplicate filenames with different content in assets, bin, and lib. Rename them to be pipeline specific, and update the code bases (run `make file-conflict-search` here).
